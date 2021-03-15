@@ -5,9 +5,14 @@ Projeto Internet Bank
 * O objetivo principal é servir configurações para os microserviços.
 
 ### Documentação
-git clone https://github.com/ntt2k/OnlineBanking.git
-cd OnlineBanking
+git clone https://github.com/andradesampaio/internet-bank
+</br>
+cd config-server
+</br>
 docker-compose up
+
+#Url da Api
+http://localhost:8888/{nome do serviço}/application.properties
 
 ### Arquitetura
 
