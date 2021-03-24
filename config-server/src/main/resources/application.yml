@@ -14,5 +14,5 @@ spring:
       server:
         git:
           uri: https://github.com/andradesampaio/microservice-repo
-          search-paths: user,login
+          search-paths: customer
 
