@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "5dff551e-742d-409b-a9d5-761236474fda",
+		"name": "Internet-Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "http://localhost:8080/v1/customers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"document\": \"12345678900\",\n    \"name\": \"Marilia Gabriela Pires Matos\",\n    \"password\": \"password\",\n    \"email\": \"mariliagp1@hotmail.com\",\n    \"active\": \"1\",\n    \"motherName\": \"Rosana Pires Matos\",\n    \"birthday\": \"1992-07-31\",\n    \"fatherName\": \"Marco Antonio Matos\",\n    \"gender\": \"F\",\n    \"country\": \"Brasil\",\n    \"profession\": \"Advogado\",\n    \"pinCard\": \"1234\",\n    \"typeAccount\": \"SAVINGS_ACCOUNT\",\n    \"address\": {\n        \"street\": \"Rua Leandro da Silva\",\n        \"number\": \"30\",\n        \"complement\": \"Apto 504\",\n        \"neighborhood\": \"Santa Maria\",\n        \"country\": \"Brasil\",\n        \"city\": \"Sao Paulo\",\n        \"state\": \"Sao Paulo\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/v1/customers/37442789211",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/v1/customers/37442789211",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"customers",
+								"37442789211"
+							],
+							"query": [
+								{
+									"key": "document",
+									"value": "37442789830",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ApiConfig",
+			"item": [
+				{
+					"name": "http://localhost:8888/customer/application.properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/customer/application.properties",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"customer",
+								"application.properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "localhost:8081/api/login/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "SD-Id",
+								"value": "852f1fc839750b6463259c13c68383a0",
+								"disabled": true
+							},
+							{
+								"key": "SD-Platform",
+								"value": "Site.PJ",
+								"disabled": true
+							},
+							{
+								"key": "SD-Language",
+								"value": "pt_BR",
+								"disabled": true
+							},
+							{
+								"key": "SD-Version",
+								"value": "5.0",
+								"disabled": true
+							},
+							{
+								"key": "x-forwarded-for",
+								"value": "15151568",
+								"disabled": true
+							},
+							{
+								"key": "SD-x-forwarded-for",
+								"value": "1541854184",
+								"disabled": true
+							},
+							{
+								"key": "X-Application-Key",
+								"value": "16165C90D52D01368953005056AA0814",
+								"disabled": true
+							},
+							{
+								"key": "Cookie",
+								"value": "JSESSIONID=0E70E7CD27326A0F11B075EF6C02B4EC",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\" : \"123456789010\",\n  \"password\" : \"password\", \n  \"email\":\"1mariliagp1@hlotmail.com\",\n  \"active\":\"1\"\n}\n"
+						},
+						"url": {
+							"raw": "localhost:8081/api/login/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"login",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
