@@ -22,7 +22,7 @@ public class CurrentAccountService {
     public Customer generateCurrentAccount(Customer customer){
         CurrentAccount currentAccount = new CurrentAccount();
         currentAccount.setCheckDigit(currentAccount.getCheckDigit());
-        currentAccount.setAccountNumber(currentAccount.getAccountNumber());
+        currentAccount.setAccountNumber(currentAccount.generateAccountNumber());
         currentAccount.setCurrentBalance(BigDecimal.ZERO);
          return checkTypeAccount(customer, currentAccount);
     }

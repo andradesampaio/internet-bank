@@ -30,8 +30,8 @@ public class CurrentAccount{
     @OneToOne(cascade=CascadeType.PERSIST)
     private CreditCard creditCard;
 
-    public Long getAccountNumber() {
-        return ++NEXTACCOUNTNUMBER;
+    public Long generateAccountNumber() {
+           return ++NEXTACCOUNTNUMBER;
     }
 
     public int getCheckDigit() {

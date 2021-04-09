@@ -27,7 +27,7 @@ public class SavingsAccount{
     private BigDecimal yieldCurrent = new BigDecimal(0);
     private static Long NEXTACCOUNTNUMBER = 11223145L;
 
-    public Long getAccountNumber() {
+    public Long generateAccountNumber() {
         return ++NEXTACCOUNTNUMBER;
     }
 

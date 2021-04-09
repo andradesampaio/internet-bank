@@ -14,7 +14,7 @@ public class SavingsAccountService {
     public Customer generateSavingsAccount(Customer customer) {
         SavingsAccount savingsAccount = new SavingsAccount();
         savingsAccount.setCheckDigit(savingsAccount.getCheckDigit());
-        savingsAccount.setAccountNumber(savingsAccount.getAccountNumber());
+        savingsAccount.setAccountNumber(savingsAccount.generateAccountNumber());
         savingsAccount.setStatus(true);
         savingsAccount.setCurrentBalance(BigDecimal.ZERO);
         savingsAccount.setYieldCurrent(BigDecimal.valueOf(0));
